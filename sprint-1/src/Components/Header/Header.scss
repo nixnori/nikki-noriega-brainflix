@@ -25,16 +25,10 @@
     }
 
     &__button {
-        width: 80%;
-        margin-top: 2rem;
+        width: 78%;
     }
 
     &__profile {
-        background-image: url(../../assets/Images/Mohan-muruge.jpg);
-        background-position: left;
-        background-size: cover;
-        width: 3rem;
-        height: 3rem;
-        border-radius: 100%;
+        border: solid 1px black;
     }
 }

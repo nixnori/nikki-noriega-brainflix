@@ -1,0 +1,52 @@
+@import '../../../partials/variables';
+
+.description {
+    padding: 2rem 1rem;
+
+    &__title {
+        line-height: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    &__item {
+        display: flex;
+        align-items: baseline;
+        margin-bottom: 1.5rem;
+    }
+
+    &__channel {
+        font-weight: 600;
+        margin-right: 0.5rem;
+    }
+
+    &__date {
+        color: $silver;
+        font-size: 0.8125rem;
+    }
+
+    &__views {
+        margin-right: 1.5rem;
+    }
+
+    &__icon {
+        margin-right: 0.5rem;
+    }
+
+    &__container {
+        border-bottom: solid 1px $mercury;
+        margin-bottom: 1.5rem;
+    }
+
+    &__text {
+        font-size: 0.8125rem;
+        line-height: 1.25rem;
+    }
+}
+
+.item-2 {
+    align-items: flex-start;
+}
+
+.numbers {
+    font-size: 0.8125rem;
+}
