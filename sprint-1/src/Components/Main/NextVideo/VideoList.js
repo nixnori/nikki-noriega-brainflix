@@ -1,13 +1,13 @@
 import { v4 as uuidv4 } from 'uuid';
-import vid0 from '../../assets/Images/video-list-0.jpg';
-import vid1 from '../../assets/Images/video-list-1.jpg';
-import vid2 from '../../assets/Images/video-list-2.jpg';
-import vid3 from '../../assets/Images/video-list-3.jpg';
-import vid4 from '../../assets/Images/video-list-4.jpg';
-import vid5 from '../../assets/Images/video-list-5.jpg';
-import vid6 from '../../assets/Images/video-list-6.jpg';
-import vid7 from '../../assets/Images/video-list-7.jpg';
-import vid8 from '../../assets/Images/video-list-8.jpg';
+import vid0 from '../../../assets/Images/video-list-0.jpg';
+import vid1 from '../../../assets/Images/video-list-1.jpg';
+import vid2 from '../../../assets/Images/video-list-2.jpg';
+import vid3 from '../../../assets/Images/video-list-3.jpg';
+import vid4 from '../../../assets/Images/video-list-4.jpg';
+import vid5 from '../../../assets/Images/video-list-5.jpg';
+import vid6 from '../../../assets/Images/video-list-6.jpg';
+import vid7 from '../../../assets/Images/video-list-7.jpg';
+import vid8 from '../../../assets/Images/video-list-8.jpg';
 
 const sideVideo = [
     {

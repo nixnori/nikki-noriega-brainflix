@@ -6,11 +6,13 @@ import Description from './Components/Main/Description/Description';
 import Form from './Components/Main/Form/Form';
 import commentsList from './Components/Main/Comments/CommentsList';
 import Comments from './Components/Main/Comments/Comments';
+import sideVideo from './Components/Main/NextVideo/VideoList';
+import NextVideo from './Components/Main/NextVideo/NextVideo';
 
 class App extends Component {
 
   state = {
-    video: videoData[0],
+    video: sideVideo[0]
   }
 
   render() {
@@ -18,9 +20,10 @@ class App extends Component {
       <div>
         <Header/>
         <Video />
-        <Description video={this.state.video} />
+        <Description video={videoData} />
         <Form />
         <Comments comments={commentsList} />
+        <NextVideo videoList={sideVideo} state={this.state.video}/>
       </div>
     );
   }

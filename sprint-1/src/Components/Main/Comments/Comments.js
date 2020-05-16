@@ -8,7 +8,7 @@ const Comments = props => {
             {
                 props.comments.map(comment => {
                     return (
-                    <div className="comments__card">
+                    <div className="comments__card" key={comment.id}>
                         <img className="comments__pic" src={comment.pic}/>
                         <div className="comments__item">
                             <ul className="comments__list">
