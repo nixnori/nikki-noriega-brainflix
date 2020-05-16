@@ -4,10 +4,14 @@
 button {
     color: $white;
     background-color: $lightblue;
-    padding: 1rem 3rem;
-    border-radius: 5px;
+    padding: 1rem 1rem;
+    border-radius: 4px;
     font-family: 'Avenir';
     font-weight: 600;
     font-size: 0.8125rem;
-    border: none;
+    border: solid 1px $lightblue;
+}
+
+.button__icon {
+    margin-right: 0.5rem;
 }

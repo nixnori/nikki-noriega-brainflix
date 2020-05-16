@@ -1,11 +1,20 @@
-@import '../../../partials/variables';
+@import '../../../partials/variables', '../../../partials/mixins';
 
 .description {
     padding: 2rem 1rem;
 
+    @include tablet {
+        padding: 3rem 1.5rem 3.5rem;
+    }
+
     &__title {
         line-height: 2rem;
         margin-bottom: 0.5rem;
+
+        @include tablet {
+            font-size: 2.25rem;
+            margin-bottom: 1rem;
+        }
     }
 
     &__item {
@@ -22,31 +31,53 @@
     &__date {
         color: $silver;
         font-size: 0.8125rem;
-    }
 
-    &__views {
-        margin-right: 1.5rem;
+        @include tablet {
+            font-size: 0.9rem;
+        }
     }
 
     &__icon {
         margin-right: 0.5rem;
     }
 
+    &__numbers {
+        font-size: 0.8125rem;
+        margin-right: 1.5rem;
+
+        @include tablet {
+            font-size: 0.9rem;
+        }
+    }
+
     &__container {
         border-bottom: solid 1px $mercury;
         margin-bottom: 1.5rem;
+
+        @include tablet {
+            margin-bottom: 2rem;
+        }
     }
 
     &__text {
         font-size: 0.8125rem;
         line-height: 1.25rem;
+
+        @include tablet {
+            font-size: 0.9rem;
+            width: 75%;
+            line-height: 1.5rem;
+        }
+    }
+}
+
+.items {
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
     }
 }
 
 .item-2 {
     align-items: flex-start;
-}
-
-.numbers {
-    font-size: 0.8125rem;
 }

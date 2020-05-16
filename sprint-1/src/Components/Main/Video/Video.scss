@@ -1,4 +1,16 @@
-video {
-    display: flex;
+@import '../../../partials/mixins', '../../../partials/mixins';
+
+.main-video {
     width: 100%;
+
+    @include tablet {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+
+    &__container {
+        background-color: black;
+        display: flex;
+    }
 }

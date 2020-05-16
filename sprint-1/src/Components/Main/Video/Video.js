@@ -6,7 +6,9 @@ import './Video.scss';
 
 const Video = () => {
     return (
-        <video className="main" poster={vid0} controls></video>
+        <div className="main-video__container">
+            <video className="main-video" poster={vid0} controls></video>
+        </div>
     )
 }
 

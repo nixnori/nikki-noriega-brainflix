@@ -12,8 +12,10 @@ const Form = () => {
                 <form action="" className="form">
                     <ProfilePic />
                     <div className="form__item">
-                        <label className="form__label" htmlFor="name">JOIN THE CONVERSATION</label>
-                        <textarea className="form__textbox" type="text" name="name" value="Write comment here"></textarea>
+                        <div className="textbox">
+                            <label className="form__label" htmlFor="name">JOIN THE CONVERSATION</label>
+                            <textarea className="form__textbox" type="text" name="name" placeholder="Write comment here"></textarea>            
+                        </div>
                         <Button text='COMMENT' className="form__button"/>
                     </div>
                 </form>
