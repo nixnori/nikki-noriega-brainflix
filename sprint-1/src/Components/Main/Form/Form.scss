@@ -1,5 +1,53 @@
-.form__pic {
-    width: 2.75rem;
-    height: 2.75rem;
-    border-radius: 100%;
+@import '../../../partials/variables';
+
+.form {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px $mercury;
+    margin-bottom: 1.5rem;
+
+    &__section {
+        padding: 0 1rem;
+    }
+
+    &__header {
+        font-weight: 600;
+        margin-bottom: 2rem;
+    }
+
+    &__pic {
+        width: 2.75rem;
+        height: 2.75rem;
+        border-radius: 100%;
+    }
+
+    &__item {
+        width: 78%;
+    }
+
+    &__label {
+        display: block;
+        font-size: 0.8rem;
+        color: $silver;
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+    }
+
+    &__textbox {
+        padding: 0.9rem;
+        background-color: $alabaster;
+        border-radius: 5px;
+        border: solid 2px $mercury;
+        width: 100%;
+        height: 6rem;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+        resize: none;
+    }
+
+    &__button {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
 }
+

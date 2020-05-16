@@ -4,7 +4,7 @@ import './Comments.scss';
 const Comments = props => {
 
     return (
-        <div className="comments__container">
+        <div className="comments">
             {
                 props.comments.map(comment => {
                     return (
