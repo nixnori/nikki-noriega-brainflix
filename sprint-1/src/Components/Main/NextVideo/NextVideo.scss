@@ -1,5 +1,37 @@
+@import '../../../partials/variables';
+
 .video {
+    &__section {
+        padding: 0 1rem;
+    }
+
+    &__header {
+        color: $silver;
+        font-size: 0.8125rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+
     &__image {
-        width: 3rem;
+        width: 40%;
+        height: 4.5rem;
+        border-radius: 5px;
+        margin-right: 1rem;
+    }
+
+    &__text {
+        font-size: 0.8125rem;
+        line-height: 1.25rem;
+    }
+
+    &__title {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
     }
 }
