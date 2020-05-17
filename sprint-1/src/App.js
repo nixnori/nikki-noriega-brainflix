@@ -13,7 +13,8 @@ import NextVideo from './Components/Main/NextVideo/NextVideo';
 class App extends Component {
 
   state = {
-    video: sideVideo[0]
+    videoData: videoData,
+    currenVideo: sideVideo[0]
   }
 
   render() {
@@ -23,7 +24,7 @@ class App extends Component {
         <Video />
         <div className="app__container">
           <div className="app__descr">
-            <Description video={videoData} />
+            <Description video={this.state.videoData} />
             <Form />
             <Comments comments={commentsList} />
           </div>

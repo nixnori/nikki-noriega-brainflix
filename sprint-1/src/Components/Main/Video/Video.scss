@@ -37,7 +37,11 @@
         }
 
         @include desktop {
-            padding: 0 5vw 1rem;
+            width: 85%;
+        }
+
+        @include desktop-l {
+            width: 70%;
         }
     }
     
