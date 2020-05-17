@@ -12,3 +12,8 @@ $desktop: 1200px;
         @content;
     }
 };
+
+@mixin scrubber-bg {
+    background: rgba($color: #000000, $alpha: 0.5);
+    border-radius: 4px;
+}
