@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './App.scss';
 import Header from './Components/Header/Header';
 import Video from './Components/Main/Video/Video';
@@ -10,11 +10,11 @@ import Comments from './Components/Main/Comments/Comments';
 import sideVideo from './Components/Main/NextVideo/VideoList';
 import NextVideo from './Components/Main/NextVideo/NextVideo';
 
-class App extends Component {
+class App extends React.Component {
 
   state = {
     videoData: videoData,
-    currenVideo: sideVideo[0]
+    currentVideo: sideVideo[0]
   }
 
   render() {
@@ -29,7 +29,7 @@ class App extends Component {
             <Comments comments={commentsList} />
           </div>
           <div className="app__vidlist">
-            <NextVideo videoList={sideVideo} state={this.state.video}/>
+            <NextVideo videoList={sideVideo} state={this.state.currentVideo}/>
           </div>
         </div>
       </div>

@@ -61,8 +61,6 @@
 
     &__button {
         width: 78%;
-        display: flex;
-        align-items: flex-start;
 
         @include tablet {
             margin-right: 1rem;
