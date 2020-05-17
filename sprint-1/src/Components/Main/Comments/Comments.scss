@@ -9,6 +9,10 @@
         padding: 0 1.5rem 0.5rem;
     }
 
+    @include desktop {
+        padding: 0 0 0.5rem;
+    }
+
     &__card {
         display: flex;
         justify-content: space-between;
@@ -17,6 +21,10 @@
 
         @include tablet {
             justify-content: flex-start;
+        }
+
+        @include desktop {
+            padding-right: 1.5rem;
         }
     }
 

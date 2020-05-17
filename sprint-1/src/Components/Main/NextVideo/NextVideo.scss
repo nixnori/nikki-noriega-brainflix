@@ -9,6 +9,11 @@
         @include tablet {
             padding: 0 1.5rem 1rem;
         }
+
+        @include desktop {
+            padding: 3rem 1.5rem 1rem;
+        }
+
     }
 
     &__header {

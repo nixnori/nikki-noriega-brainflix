@@ -13,6 +13,10 @@
         padding: 1rem 1.5rem 0.5rem;
     }
 
+    @include desktop {
+        padding: 1rem 12vw 0.5rem;
+    }
+
     &__logo {
         margin-bottom: 0.5rem;
 
