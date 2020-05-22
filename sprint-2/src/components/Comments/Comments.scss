@@ -1,0 +1,83 @@
+@import '../../../partials/variables', '../../../partials/mixins';
+
+.comments {
+    padding: 0 1rem 0.5rem;
+    display: flex;
+    flex-direction: column-reverse;
+
+    @include tablet {
+        padding: 0 1.5rem 0.5rem;
+    }
+
+    @include desktop {
+        padding: 0 0 0.5rem;
+    }
+
+    &__card {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: solid 1px $mercury;
+        margin-bottom: 1.5rem;
+
+        @include tablet {
+            justify-content: flex-start;
+        }
+
+        @include desktop {
+            padding-right: 1.5rem;
+        }
+    }
+
+    &__pic {
+        width: 2.75rem;
+        height: 2.75rem;
+        border-radius: 100%;
+    }
+
+    &__item {
+        margin-bottom: 1rem;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            margin-left: 1rem;
+            width: 90%;
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+
+        @include tablet {
+            justify-content: flex-start;
+        }
+
+    }
+
+    &__name {
+        font-weight: 600;
+    }
+
+    &__date {
+        color: $silver;
+        font-size: 0.85rem;
+        
+        @include tablet {
+            margin-left: 1rem;
+        }
+    }
+
+    &__text {
+        font-size: 0.85rem;
+        line-height: 1.25rem;
+
+        @include tablet {
+            font-size: 0.9rem;
+        }
+    }
+}   

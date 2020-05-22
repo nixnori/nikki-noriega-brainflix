@@ -1,0 +1,22 @@
+@import '../../partials/_variables.scss', '../../partials/_fonts.scss';
+
+
+button {
+    color: $white;
+    background-color: $lightblue;
+    padding: 1rem 1rem;
+    border-radius: 4px;
+    font-family: 'Avenir';
+    font-weight: 600;
+    font-size: 0.8125rem;
+    border: solid 1px $lightblue;
+
+    &:hover {
+        background-color: $darkblue;
+        border: solid 1px $darkblue;
+    }
+}
+
+.button__icon {
+    margin-right: 0.5rem;
+}

@@ -1,0 +1,78 @@
+@import '../../partials/variables.scss', '../../partials/mixins';
+
+.header {
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+
+    @include tablet {
+        flex-direction: row;
+        justify-content: flex-end;
+        padding: 1rem 1.5rem 0.5rem;
+    }
+
+    @include desktop {
+        padding: 1rem 12vw 0.5rem;
+    }
+
+    &__logo {
+        margin-bottom: 0.5rem;
+
+        @include tablet {
+            margin-right: auto;
+        }
+    }
+
+    &__search {
+        background-color: $alabaster;
+        border-radius: 5px;
+        padding: 1rem;
+        border: solid 1px $mercury;
+        margin-bottom: 0.5rem;
+        background-image: url(../../assets/Icons/SVG/Icon-search.svg);
+        background-repeat: no-repeat;
+        background-position: 1rem 1rem;
+        padding: 1rem 1rem 1rem 2.5rem;
+        font-size: 0.8125rem;
+
+        &:focus {
+            border: solid 2px $lightblue;
+            outline: none;
+        }
+
+        @include tablet {
+            margin-right: 1.5rem;
+            font-size: 0.9rem;
+            width: 35%;
+            padding: 0.95rem 0.75rem 0.95rem 2.5rem;
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+
+        @include tablet {
+            margin-bottom: 0;
+        }
+    }
+
+    &__button {
+        width: 85%;
+        margin-right: 1rem;
+
+        @include tablet {
+            margin-right: 1rem;
+            width: 7rem;
+            height: 3.15rem;
+        }
+    }
+
+    &__profile {
+        border: solid 1px black;
+        margin-left: 1rem;
+        flex-basis: auto;
+    }
+}
