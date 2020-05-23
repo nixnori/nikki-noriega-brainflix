@@ -1,6 +1,7 @@
 import React from 'react';
-import './App.scss';
-import Header from './components/Header/Header'
+import Header from './components/Header/Header';
+import Main from './pages/Main';
+import Upload from './pages/Upload';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 
@@ -10,7 +11,8 @@ const App = () => {
    <Header />
    <BrowserRouter>
       <Switch>
-        <Route path="/" exact component={Video} />
+        <Route path="/" exact component={Main} />
+        <Route path="/:id" component={Main} />
         <Route path="/upload" component={Upload} />
       </Switch>
    </BrowserRouter>

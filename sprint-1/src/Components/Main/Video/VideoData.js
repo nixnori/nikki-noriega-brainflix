@@ -1,5 +1,5 @@
 import vid0 from '../../../assets/Images/video-list-0.jpg';
-import comments from '../Comments/Comments'
+import comments from '../Comments/CommentsList'
 
 const videoData =
     {

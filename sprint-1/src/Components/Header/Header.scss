@@ -60,7 +60,8 @@
     }
 
     &__button {
-        width: 78%;
+        width: 85%;
+        margin-right: 1rem;
 
         @include tablet {
             margin-right: 1rem;
@@ -71,5 +72,7 @@
 
     &__profile {
         border: solid 1px black;
+        margin-left: 1rem;
+        flex-basis: auto;
     }
 }

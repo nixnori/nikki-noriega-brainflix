@@ -1,12 +1,12 @@
 import React from 'react';
 import './Form.scss';
-import Button from '../../Button/Button';
-import ProfilePic from '../../ProfilePic/ProfilePic';
+import Button from '../Button/Button';
+import ProfilePic from '../ProfilePic/ProfilePic';
 
 const Form = (props) => {
     return (
         <div className="form__section">
-            <h4 className="form__header">{props.state} Comments</h4>
+            <h4 className="form__header">{props.commentsLength ? props.commentsLength.length : null} Comments</h4>
             <div className="form__container">
                 <form action="" className="form">
                     <ProfilePic />

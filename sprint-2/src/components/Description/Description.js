@@ -1,6 +1,6 @@
 import React from 'react';
-import views from '../../../assets/Icons/SVG/Icon-views.svg';
-import likes from '../../../assets/Icons/SVG/Icon-likes.svg';
+import views from '../../assets/Icons/SVG/Icon-views.svg';
+import likes from '../../assets/Icons/SVG/Icon-likes.svg';
 import './Description.scss';
 
 const Description = props => {
