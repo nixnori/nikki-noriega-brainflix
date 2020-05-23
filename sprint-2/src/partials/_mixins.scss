@@ -24,3 +24,11 @@ $desktop-l: 1440px;
     background: rgba($color: #000000, $alpha: 0.5);
     border-radius: 4px;
 }
+
+@mixin textbox {
+    width: 100%;
+    background-color: $alabaster;
+    border: solid 1px $mercury;
+    padding: 0.8rem;
+    border-radius: 4px;
+}

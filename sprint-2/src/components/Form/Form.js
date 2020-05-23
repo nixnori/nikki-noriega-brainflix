@@ -3,10 +3,10 @@ import './Form.scss';
 import Button from '../Button/Button';
 import ProfilePic from '../ProfilePic/ProfilePic';
 
-const Form = (props) => {
+const Form = ({commentsLength}) => {
     return (
         <div className="form__section">
-            <h4 className="form__header">{props.commentsLength ? props.commentsLength.length : null} Comments</h4>
+            <h4 className="form__header">{commentsLength ? commentsLength.length : null} Comments</h4>
             <div className="form__container">
                 <form action="" className="form">
                     <ProfilePic />

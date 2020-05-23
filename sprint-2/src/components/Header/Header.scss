@@ -6,6 +6,7 @@
     display: flex;
     padding: 1rem;
     flex-direction: column;
+    box-shadow: 0 0 2px $silver;
 
     @include tablet {
         flex-direction: row;
@@ -18,9 +19,12 @@
     }
 
     &__logo {
-        margin-bottom: 0.5rem;
+        padding-bottom: 0.5rem;
+        margin: auto;
 
         @include tablet {
+            padding-top: 0.75rem;
+            margin: 0;
             margin-right: auto;
         }
     }
@@ -60,7 +64,7 @@
     }
 
     &__button {
-        width: 85%;
+        width: 100%;
         margin-right: 1rem;
 
         @include tablet {
@@ -73,6 +77,9 @@
     &__profile {
         border: solid 1px black;
         margin-left: 1rem;
-        flex-basis: auto;
     }
+}
+
+.button__link {
+    width: 78%;
 }

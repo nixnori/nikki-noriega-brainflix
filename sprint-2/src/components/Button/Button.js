@@ -3,7 +3,7 @@ import './Button.scss';
 
 const Button = props => {
     return (
-        <button className={props.className}>
+        <button className={`button ${props.className}`}>
             <img className="button__icon" src={props.image} />
             {props.text}
         </button>

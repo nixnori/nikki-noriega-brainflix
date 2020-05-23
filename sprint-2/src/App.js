@@ -5,14 +5,14 @@ import Upload from './pages/Upload';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 
-const App = () => {
+function App() {
  return (
    <>
-   <Header />
    <BrowserRouter>
+      <Header />
       <Switch>
         <Route path="/" exact component={Main} />
-        <Route path="/:id" component={Main} />
+        {/* <Route path="/:id" component={Main} /> */}
         <Route path="/upload" component={Upload} />
       </Switch>
    </BrowserRouter>

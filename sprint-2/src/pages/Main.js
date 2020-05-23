@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import {Link} from 'react-router-dom';
 import Video from '../components/Video/Video';
 import Description from '../components/Description/Description';
 import Form from '../components/Form/Form';
 import Comments from '../components/Comments/Comments';
 import NextVideo from '../components/NextVideo/NextVideo';
+import './Main.scss';
 
 
 const API_URL = "https://project-2-api.herokuapp.com"
@@ -44,17 +44,20 @@ class Main extends Component {
     }
 
     render() {
+       
+        let sideVideo = this.state.videoList.filter(video => video.id !== this.state.mainVideo.id);
+       
         return (
             <>
-                <Video posterImage={this.state.mainVideo.image} duration={this.state.mainVideo.duration}/>
+                <Video posterImage={this.state.mainVideo.image} duration={this.state.mainVideo.duration} />
                 <div className="main__container">
                     <div className="main__descr">
                         <Description video={this.state.mainVideo} />
-                        <Form commentsLength={this.state.mainVideo.comments}/>
+                        <Form commentsLength={this.state.mainVideo.comments} />
                         <Comments comments={this.state.mainVideo.comments} />
                     </div>
                 <div className="main__vidlist">
-                    <NextVideo videoList={this.state.videoList}/>
+                    <NextVideo videoList={sideVideo}/>
                 </div>
                 </div>
             </>

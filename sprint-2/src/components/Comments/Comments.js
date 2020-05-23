@@ -1,16 +1,16 @@
 import React from 'react';
 import './Comments.scss';
 
-const Comments = props => {
+const Comments = ({comments}) => {
 
     return (
         <div className="comments">
             {
-                props.comments 
-                ? props.comments.map(comment => {
+                comments 
+                ? comments.map(comment => {
                     return (
                     <div className="comments__card" key={comment.id}>
-                        <img className="comments__pic" src={comment.image}/>
+                        <div className="comments__pic"></div>
                         <div className="comments__item">
                             <ul className="comments__list">
                                 <li className="comments__name">{comment.name}</li>
