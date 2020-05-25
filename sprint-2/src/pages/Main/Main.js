@@ -22,10 +22,13 @@ class Main extends Component {
         axios
         .get(`${API_URL}/videos${KEY}`)
         .then(response => {
+            this.setState({
+                videoList: response.data
+            })
+
             if (!this.props.match.params.videoId) {
                 this.setState({
                     mainVideo: response.data[0],
-                    videoList: response.data
                 })
     
                 axios
@@ -39,10 +42,6 @@ class Main extends Component {
                     console.log(error);
                 })
             } else {
-                this.setState({
-                    videoList: response.data
-                })
-
                 axios
                 .get(`${API_URL}/videos/${this.props.match.params.videoId+KEY}`)
                 .then(response => {
@@ -64,7 +63,6 @@ class Main extends Component {
             .then(response => {
                 this.setState({
                     mainVideo: response.data[0],
-                    videoList: response.data
                 })
         
                 axios
