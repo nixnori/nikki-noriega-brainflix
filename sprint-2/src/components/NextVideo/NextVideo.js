@@ -1,5 +1,6 @@
 import React from 'react';
 import './NextVideo.scss';
+import { Link } from 'react-router-dom';
 
 const NextVideo = props => {
     return (
@@ -8,13 +9,15 @@ const NextVideo = props => {
             {
                 props.videoList.map(video => {
                     return (
-                        <div className="video__container" key={video.id}>
-                            <img className="video__image" src={video.image} />
-                            <div className="video__text">
-                                <h4 className="video__title">{video.title}</h4>
-                                <p className="video__channel">{video.channel}</p>
+                        <Link to={`/${video.id}`} className="video__link" key={video.id}>
+                            <div className="video__container">
+                                <img className="video__image" src={video.image} alt="video" />
+                                <div className="video__text">
+                                    <h4 className="video__title">{video.title}</h4>
+                                    <p className="video__channel">{video.channel}</p>
+                                </div>
                             </div>
-                        </div>
+                        </Link>
                     );   
                 })
             }

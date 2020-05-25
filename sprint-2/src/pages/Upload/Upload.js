@@ -1,7 +1,7 @@
 import React from 'react';
 import './Upload.scss';
-import uploadImg from '../assets/Images/Upload-video-preview.jpg';
-import Button from "../components/Button/Button";
+import uploadImg from '../../assets/Images/Upload-video-preview.jpg';
+import Button from '../../components/Button/Button';
 
 const Upload = () => {
     return (
@@ -10,7 +10,7 @@ const Upload = () => {
             <div className="upload__container">
                 <div className="upload__item--1">
                     <h4 className="upload__label">VIDEO THUMBNAIL</h4>
-                    <img className="upload__image" src={uploadImg} />
+                    <img className="upload__image" src={uploadImg} alt="video" />
                 </div>
                 <div className="upload__item--2">
                     <h4 className="upload__label">TITLE YOUR VIDEO</h4>

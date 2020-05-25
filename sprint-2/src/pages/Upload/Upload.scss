@@ -1,4 +1,4 @@
-@import '../partials/mixins', '../partials/variables';
+@import '../../partials/mixins', '../../partials/variables';
 
 .upload {
     padding: 1.5rem 1rem 1rem;
@@ -81,6 +81,11 @@
         @include textbox;
         font-size: 0.85rem;
         margin-bottom: 1rem;
+
+        &:focus {
+            border: solid 2px $lightblue;
+            outline: none;
+        }
     }
 
     &__description {
@@ -89,6 +94,11 @@
         font-size: 0.85rem;
         margin-bottom: 1.5rem;
         height: 9rem;
+
+        &:focus {
+            border: solid 2px $lightblue;
+            outline: none;
+        }
 
         @include tablet {
             margin-bottom: 0;
@@ -121,6 +131,10 @@
         font-size: 0.8125rem;
         color: $lightblue;
         width: 100%;
+
+        &:hover {
+            color: $darkblue;
+        }
 
         @include tablet {
             width: 10rem;

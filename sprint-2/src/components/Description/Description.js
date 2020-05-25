@@ -16,9 +16,9 @@ const Description = ({video}) => {
                         </p>
                     </div>
                     <div className="description__item item-2">
-                        <img className="description__icon" src={views} />
+                        <img className="description__icon" src={views} alt="views" />
                         <p className="description__numbers">{video.views}</p>
-                        <img className="description__icon" src={likes} />
+                        <img className="description__icon" src={likes} alt="likes" />
                         <p className="description__numbers">{video.likes}</p>
                     </div>
                 </div>
