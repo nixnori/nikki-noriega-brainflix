@@ -1,0 +1,147 @@
+@import '../../partials/mixins', '../../partials/variables';
+
+.upload {
+    padding: 1.5rem 1rem 1rem;
+
+    @include tablet {
+        padding: 2rem 1.5rem 10rem;
+    }
+
+    @include desktop {
+        padding: 3rem 12vw 25rem;
+    }
+
+    &__header{
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+
+        @include tablet {
+            font-size: 2.25rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__container {
+        @include tablet {
+            padding: 2rem 0;
+            border-top: solid 1px $mercury;
+            border-bottom: solid 1px $mercury;
+            margin-bottom: 2rem;
+        }
+
+        @include desktop {
+            display: flex;
+        }
+    }
+
+    &__item {
+        &--1 {
+            @include desktop {
+                width: 37%;
+                margin-right: 1.5rem;
+            }
+        }
+
+        &--2 {
+            @include desktop {
+                width: 63%;
+            }
+        }
+    }
+
+    &__label {
+        color: $silver;
+        font-weight: 600;
+        font-size: 0.75rem;
+        margin-bottom: 0.25rem;
+    }
+
+    &__image {
+        width: 100%;
+        border-radius: 4px;
+        margin-bottom: 1.5rem;
+
+        @include tablet {
+            width: 50%;
+        }
+
+        @include desktop {
+            width: 100%;
+            margin-bottom: 0;
+        }
+
+    }
+
+    &__title {
+        @include textbox;
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+
+        &:focus {
+            border: solid 2px $lightblue;
+            outline: none;
+        }
+    }
+
+    &__description {
+        @include textbox;
+        resize: none;
+        font-size: 0.85rem;
+        margin-bottom: 1.5rem;
+        height: 9rem;
+
+        &:focus {
+            border: solid 2px $lightblue;
+            outline: none;
+        }
+
+        @include tablet {
+            margin-bottom: 0;
+        }
+
+        @include desktop {
+            height: 6rem;
+        }
+    }
+
+    &__button {
+        width: 100%;
+        padding-left: 0.5rem;
+        margin-bottom: 1rem;
+
+        @include tablet {
+            margin-bottom: 0;
+            width: 10rem;
+        }
+    }
+}
+
+.button {
+    
+    &__cancel {
+        border: none;
+        background: none;
+        font-weight: 600;
+        padding: 1rem;
+        font-size: 0.8125rem;
+        color: $lightblue;
+        width: 100%;
+
+        &:hover {
+            color: $darkblue;
+        }
+
+        @include tablet {
+            width: 10rem;
+        }
+    }
+
+    &__container {
+        @include tablet {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-start;
+            width: 100%;
+        }
+    }
+}

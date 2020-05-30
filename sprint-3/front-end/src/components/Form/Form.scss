@@ -1,0 +1,103 @@
+@import '../../partials/variables', '../../partials/mixins';
+
+.form {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px $mercury;
+    margin-bottom: 1.5rem;
+
+    @include tablet {
+        align-items: flex-end;
+        padding-bottom: 1rem;
+        justify-content: flex-start;
+    }
+
+    @include desktop {
+        padding-right: 2rem;
+    }
+
+    &__section {
+        padding: 0 1rem;
+
+        @include tablet {
+            padding: 0 1.5rem;
+        }
+
+        @include desktop {
+            padding: 0;
+        }
+    }
+
+    &__header {
+        font-weight: 600;
+        margin-bottom: 2rem;
+    }
+
+    &__item {
+        width: 78%;
+
+        @include tablet {
+            display: flex;
+            align-items: flex-end;
+            margin-left: 1rem;
+            width: 90%;
+        }
+    }
+
+    &__label {
+        display: block;
+        font-size: 0.8rem;
+        color: $silver;
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+    }
+
+    &__textbox {
+        padding: 0.9rem;
+        background-color: $alabaster;
+        border-radius: 5px;
+        border: solid 2px $mercury;
+        width: 100%;
+        height: 6rem;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+        resize: none;
+        font-size: 0.8125rem;
+
+        &:focus {
+            border: solid 2px $lightblue;
+            outline: none;
+        }
+
+        @include tablet {
+            padding: 0.8rem;
+            height: 2.9rem;
+            margin: 0 1rem 0 0;
+            font-size: 0.9rem;
+        }
+    }
+
+    &__button {
+        width: 100%;
+        margin-bottom: 1.5rem;
+        padding-left: 0.5rem;
+        border: none;
+
+        @include tablet {
+            height: 2.9rem;
+            width: 9rem;
+            margin-bottom: 0.25rem;
+            
+        }
+    }
+}
+
+.textbox {
+    text-align: left;
+    @include tablet {
+        margin-right: 1rem;
+        width: 70%;
+    }
+}
+
+

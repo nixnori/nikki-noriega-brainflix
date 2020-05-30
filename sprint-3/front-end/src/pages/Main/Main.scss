@@ -1,0 +1,16 @@
+@import '../../partials/variables', '../../partials/mixins';
+
+.main {
+    &__container {
+        @include desktop {
+            display: flex;
+            padding: 0 12vw;
+        }
+    }
+
+    &__descr {
+        @include desktop {
+            border-right: solid 1px $mercury;
+        }
+    }
+}

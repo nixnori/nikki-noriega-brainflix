@@ -1,0 +1,15 @@
+@import './partials/fonts', './partials/mixins', './partials/variables';
+
+
+body, * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Avenir';
+  color: $black;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

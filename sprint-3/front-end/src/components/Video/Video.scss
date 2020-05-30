@@ -1,0 +1,104 @@
+@import '../../partials/variables', '../../partials/mixins';
+
+.main-video {
+    width: 100%;
+
+    &[poster] {
+        height: 100%;
+    }
+
+    @include tablet {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    &__container {
+        background-color: black;
+        display: flex;
+        position: relative;
+       
+        @include desktop {
+            height: 33.75rem;
+        }
+    }
+
+    &__controls {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        padding: 0 2vw 0.5rem;
+        justify-content: space-evenly;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        text-align: center;
+
+        @include tablet {
+            width: 90%;
+            padding-bottom: 1rem;
+        }
+
+        @include desktop {
+            width: 85%;
+        }
+
+        @include desktop-l {
+            width: 70%;
+        }
+    }
+    
+    &__play {
+        @include scrubber-bg;
+        padding: 0.5rem 1rem 0.25rem;
+    }
+
+    &__scrubber {
+        @include scrubber-bg;
+        padding: 0.5rem 1rem 0.25rem;
+        width: 50%;
+        display: flex;
+
+        @include tablet {
+            width: 75%;
+        }
+
+        @include desktop {
+            width: 80%;
+        }
+
+
+        &--line {
+            display: inline-block;
+            width: 100%;
+            border: solid 2px black;
+            border-radius: 6px;
+            margin-top: 0.5rem;
+            height: 1px;
+
+            @include tablet {
+                width: 90%;
+                margin-right: 1rem;
+            }
+        }
+    }
+
+    &__time {
+        display: none;
+
+        @include tablet {
+            display: inline;
+            color: $white;
+            font-size: 0.8125rem;
+        }
+    }
+
+    &__full-vol {
+        @include scrubber-bg;
+        padding: 0.5rem 0.75rem 0.25rem;
+
+        & img:first-child {
+            margin-right: 0.75rem;
+        }
+    }
+}
