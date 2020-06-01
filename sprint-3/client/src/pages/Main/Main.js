@@ -9,6 +9,7 @@ import './Main.scss';
 
 
 const API_URL = "http://localhost:8080";
+const KEY = "?api_key=ecdcc749-4c65-49ed-b885-aa391a32e3d0"
 
 class Main extends Component {
     state = {
@@ -70,7 +71,7 @@ class Main extends Component {
        
         return (
             <>
-                <Video posterImage={this.state.mainVideo.image} duration={this.state.mainVideo.duration} video={this.state.mainVideo.video} />
+                <Video posterImage={this.state.mainVideo.image} duration={this.state.mainVideo.duration} video={this.state.mainVideo.video+KEY} />
                 <div className="main__container">
                     <div className="main__descr">
                         <Description video={this.state.mainVideo} />

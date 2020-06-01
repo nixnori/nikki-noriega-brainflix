@@ -66,19 +66,17 @@ router.post('/', (req, res) => {
     const data = req.body;
 
     if (data.title && data.description && data.id) {
-        const vidData = newData;
-        vidData.id = data.id;
-        vidData.title = data.title;
-        vidData.description = data.description;
+        newData.id = data.id;
+        newData.title = data.title;
+        newData.description = data.description;
 
-        const vidList = newVideo;
-        vidList.title = data.title;
-        vidList.id = data.id;
+        newVideo.title = data.title;
+        newVideo.id = data.id;
 
-        videoData.push(vidData);
-        videoList.push(vidList);
+        videoData.push(newData);
+        videoList.push(newVideo);
         
-        res.status(200).send('Success');
+        res.status(200).json(videoList);
 
     } else {
         res.status(400).send('Error');
