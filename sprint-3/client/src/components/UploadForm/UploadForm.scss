@@ -35,6 +35,7 @@
     }
 
     &__item {
+        
         &--1 {
             @include desktop {
                 width: 37%;

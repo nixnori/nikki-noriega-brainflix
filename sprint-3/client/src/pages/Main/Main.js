@@ -8,9 +8,7 @@ import NextVideo from '../../components/NextVideo/NextVideo';
 import './Main.scss';
 
 
-const API_URL = "https://project-2-api.herokuapp.com";
-const KEY = "?api_key=ecdcc749-4c65-49ed-b885-aa391a32e3d0";
-
+const API_URL = "http://localhost:8080";
 
 class Main extends Component {
     state = {
@@ -21,9 +19,9 @@ class Main extends Component {
     changeState(change) {
         axios
             .get(`${API_URL}/videos/${change}`)
-            .then(response => {
+            .then(res => {
                 this.setState({
-                    mainVideo: response.data
+                    mainVideo: res.data
                 })
             })
             .catch(error => {
@@ -33,19 +31,20 @@ class Main extends Component {
 
     componentDidMount() {
         axios
-        .get(`${API_URL}/videos${KEY}`)
-        .then(response => {
+        .get(`${API_URL}/videos`)
+        .then(res => {
+            console.log(res.data);
             this.setState({
-                videoList: response.data
+                videoList: res.data
             })
 
             if (!this.props.match.params.videoId) {
                 this.setState({
-                    mainVideo: response.data[0],
+                    mainVideo: res.data[0],
                 })
-                this.changeState(this.state.mainVideo.id+KEY);
+                this.changeState(this.state.mainVideo.id);
             } else {
-                this.changeState(this.props.match.params.videoId+KEY)
+                this.changeState(this.props.match.params.videoId)
             }
         })
     }
@@ -53,16 +52,16 @@ class Main extends Component {
     componentDidUpdate(prevProps) {
         if (!this.props.match.params.videoId && prevProps.match.params.videoId) {
             axios
-            .get(`${API_URL}/videos${KEY}`)
-            .then(response => {
+            .get(`${API_URL}/videos`)
+            .then(res => {
                 this.setState({
-                    mainVideo: response.data[0],
+                    mainVideo: res.data[0],
                 })
-                this.changeState(this.state.mainVideo.id+KEY);
+                this.changeState(this.state.mainVideo.id);
              })
         } else if (prevProps.match.params.videoId !== this.props.match.params.videoId) {
             window.scrollTo(0, 0);
-            this.changeState(this.props.match.params.videoId+KEY);
+            this.changeState(this.props.match.params.videoId);
         } 
     }
 
@@ -71,7 +70,7 @@ class Main extends Component {
        
         return (
             <>
-                <Video posterImage={this.state.mainVideo.image} duration={this.state.mainVideo.duration} video={this.state.mainVideo.video+KEY} />
+                <Video posterImage={this.state.mainVideo.image} duration={this.state.mainVideo.duration} video={this.state.mainVideo.video} />
                 <div className="main__container">
                     <div className="main__descr">
                         <Description video={this.state.mainVideo} />
