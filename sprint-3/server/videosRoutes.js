@@ -2,14 +2,10 @@ const express = require('express');
 const router = express.Router();
 const videoList = require('./data/videos.json');
 const videoData = require('./data/videoData.json');
-const { uuid } = require('uuidv4');
 
 const newData = {
-    "id": "",
-    "title": "",
     "channel": "Daniil's Cat",
     "image": "https://imgur.com/iCL8GFp.jpg",
-    "description": "",
     "views": "0",
     "likes": "0",
     "duration": "4:20",
@@ -41,8 +37,6 @@ const newData = {
 }
 
 const newVideo = {
-    "id": "",
-    "title": "",
     "channel": "Daniil's Cat",
     "image": "https://imgur.com/iCL8GFp.jpg"
 }
@@ -66,17 +60,24 @@ router.post('/', (req, res) => {
     const data = req.body;
 
     if (data.title && data.description && data.id) {
-        newData.id = data.id;
-        newData.title = data.title;
-        newData.description = data.description;
+       
+        vidData = {
+            id: data.id,
+            title: data.title,
+            description: data.description,
+            ...newData
+        }
 
-        newVideo.title = data.title;
-        newVideo.id = data.id;
+        vidList = {
+            id: data.id,
+            title: data.title,
+            ...newVideo
+        }
 
-        videoData.push(newData);
-        videoList.push(newVideo);
+        videoData.push(vidData);
+        videoList.push(vidList);
         
-        res.status(200).json(videoList);
+        res.status(201).json(videoList);
 
     } else {
         res.status(400).send('Error');
